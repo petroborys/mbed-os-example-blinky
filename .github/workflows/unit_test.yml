@@ -30,19 +30,24 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          # sudo apt-get update -y
-          git clone https://github.com/ARMmbed/mbed-os.git
-          cd mbed-os
-          git checkout mbed-os-5.15
-          cd ..
-          cp test_watchdog.cpp mbed-os/UNITTESTS/drivers/Watchdog
-          cd mbed-os
-          cd UNITTESTS
-          mkdir build
-          cd build
-          cmake ..
-          make
-          ctest -V          
+          sudo apt-get update -y
+          sudo python3 -m pip install mbed-cli
+          mbed --help
+          # git clone https://github.com/ARMmbed/mbed-os.git
+          # cd mbed-os
+          # git checkout mbed-os-5.15
+
+          # cd ..
+          # cp test_watchdog.cpp mbed-os/UNITTESTS/drivers/Watchdog
+          # cd mbed-os
+
+          # cd UNITTESTS
+          # mkdir build
+          # cd build
+          # cmake ..
+          # make
+          # ctest -V    
+
           # sudo apt-get install -y python3-setuptools
           # sudo apt-get install gcc libpq-dev -y
           # sudo apt-get install python-dev  python-pip -y
