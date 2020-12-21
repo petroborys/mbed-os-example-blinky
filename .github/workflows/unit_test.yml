@@ -34,6 +34,12 @@ jobs:
           git clone https://github.com/ARMmbed/mbed-os.git
           cd mbed-os
           git checkout mbed-os-5.15
+          cd UNITTESTS
+          mkdir build
+          cd build
+          cmake ..
+          make
+          ctest -V          
           # sudo apt-get install -y python3-setuptools
           # sudo apt-get install gcc libpq-dev -y
           # sudo apt-get install python-dev  python-pip -y
