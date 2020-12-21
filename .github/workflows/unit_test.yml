@@ -31,5 +31,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y python-setuptools
+          sudo apt-get install -y python3-setuptools
           python3 -m pip install mbed-cli
