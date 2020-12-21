@@ -31,6 +31,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt-get update -y
+          sudo apt-get install -y python3-setuptools
           sudo python3 -m pip install mbed-cli
           mbed --help
           # git clone https://github.com/ARMmbed/mbed-os.git
