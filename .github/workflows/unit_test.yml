@@ -32,6 +32,7 @@ jobs:
         run: |
           # sudo apt-get update -y
           git clone https://github.com/ARMmbed/mbed-os.git
+          cp test_watchdog.cpp mbed-os/UNITTESTS/drivers/Watchdog
           cd mbed-os
           git checkout mbed-os-5.15
           cd UNITTESTS
